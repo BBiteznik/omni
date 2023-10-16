@@ -1,0 +1,26 @@
+{
+  "navbar": {
+    "product": "Product",
+    "solution": "Solution",
+    "customer": "Customer",
+    "pricing": "Pricing",
+    "about-us": "About Us",
+    "log-in": "Log In",
+    "sign-up": "Sign Up"
+  },
+  "landingPage": {
+    "signUp": "Sign Up",
+    "logIn": "Log In",
+    "resetPassword": "Reset password",
+    "yourEmail": "Your Email",
+    "emailPlaceholder": "name@company.com",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "iAccept": "I accept the",
+    "termsAndConditions": "Terms and Conditions",
+    "alreadyHaveAnAccount": "Already have an account?",
+    "loginHere": "Login here",
+    "dontHaveAccount": "Don't have an account yet?",
+    "forgotPassword": "Forgot password?"
+  }
+}

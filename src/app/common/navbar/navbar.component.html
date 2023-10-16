@@ -1,0 +1,20 @@
+<div class="flex w-full flex-row justify-between items-center py-4 px-8">
+    <div class="flex hover:opacity-75">
+      <a [routerLink]="''">
+        <img src="../../../favicon.ico" alt="icon">
+      </a>
+    </div>
+    <div class="flex flex-row justify-center gap-1 h-min-full">
+      <ng-container>
+        <a *ngFor="let route of routes" [routerLink]="route">
+          <div class="rounded-xl px-4 py-2 hover:bg-slate-200">{{ "navbar." + route | transloco }}</div>
+        </a>
+      </ng-container>
+    </div>
+    <div class="flex"><div>
+      <a [routerLink]="'sign-up'">
+        <div class="rounded-xl px-4 py-2 font-medium bg-slate-200 hover:opacity-75">{{ "navbar.sign-up" | transloco }}</div>
+      </a>
+    </div>
+  </div>
+</div>
