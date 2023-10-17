@@ -7,6 +7,27 @@ import { LogInComponent } from "./log-in/log-in.component";
 import { SignUpComponent } from "./sign-up/sign-up.component";
 import { ForgotPasswordComponent } from "./forgot-password/forgot-password.component";
 
+const routes: Routes = [
+  {
+    path: "",
+    component: LandingPageComponent,
+    children: [
+      {
+        path: "log-in",
+        component: LogInComponent,
+      },
+      {
+        path: "sign-up",
+        component: SignUpComponent,
+      },
+      {
+        path: "forgot-password",
+        component: ForgotPasswordComponent,
+      },
+    ],
+  },
+];
+
 @NgModule({
   declarations: [
     LandingPageComponent,
@@ -14,16 +35,7 @@ import { ForgotPasswordComponent } from "./forgot-password/forgot-password.compo
     SignUpComponent,
     ForgotPasswordComponent,
   ],
-  imports: [
-    CommonModule,
-    TranslocoModule,
-    RouterModule.forChild([
-      { path: "", component: LandingPageComponent },
-      { path: "log-in", component: LogInComponent },
-      { path: "sign-up", component: SignUpComponent },
-      { path: "forgot-password", component: ForgotPasswordComponent },
-    ]),
-  ],
+  imports: [CommonModule, TranslocoModule, RouterModule.forChild(routes)],
   exports: [LandingPageComponent],
 })
 export class LandingPageModule {}
